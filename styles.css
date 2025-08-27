@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * { 
     margin: 0;
     padding: 0;
@@ -5,8 +7,6 @@
     font-family: "Inter", sans-serif;
     color: #243e63;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
     max-width: 100vw;
@@ -53,22 +53,20 @@ NAVBAR
 */
 
 nav {
+    padding-top: 32px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 24px;
 }
 
 .nav__row {
     display: flex;
     justify-content: space-between;
-    padding: 16px;
-    align-items: center;
 }
 
 .nav__logo {
     display: flex;
     align-items: center;
+    margin: 8px 0;
+    padding-bottom: 4px;
 }
 
 .nav__logo--img {
@@ -80,6 +78,7 @@ nav {
     font-weight: 900;
     font-size: 24px;
     margin-left: 12px;
+    padding-bottom: 2px;
     letter-spacing: 0.6px;
 }
 
@@ -87,12 +86,13 @@ nav {
     font-size: 14px;
     font-weight: 600;
     margin: 0 24px;
-    letter-spacing: 0.6px;
+    padding-top: 4px;
+    letter-spacing: 0.35px;
     position: relative;
     text-decoration: underline solid transparent;
     text-decoration-thickness: 2px;
     text-underline-offset: 8px;
-    transition: all 300ms ease;
+    transition: all 300ms;
 }
 
 .nav__link:hover {
@@ -118,7 +118,7 @@ nav {
 
 .nav__link--primary {
     margin: 0;
-    padding: 14px 32px;
+    padding: 10px 32px;
     margin-top: 2px;
     border-radius: 9999px;
     color: #fff;
@@ -133,6 +133,12 @@ nav {
 .nav__link--primary:hover {
     background-color: rgba(80, 17, 204);
     text-decoration: none;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
 }
 
 .modal {
@@ -244,18 +250,20 @@ p {
 
 .header__email--input {
     width: 100%;
-    font-size: 16px;
-    font-weight: 600;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    z-index: 1;
     border-radius: 500px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(229, 231, 235);
+    border: 2px solid rgb(229, 231, 235);
     padding: 20px 192px 20px 32px;
+    color: rgb(36, 62, 99);
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
     transition: border-color 300ms;
+    padding-block: 1px;
+    padding-inline: 2px;
+    padding-left: 32px;
 }
 
 
@@ -368,8 +376,8 @@ MOBILE RESPONSIVENESS ↓
     header .row {
         align-items: flex-end;
     }
-    h1 {
-        font-size: 36px;
+    .header__description--para {
+        font-size: 16px;
     }
 }
 
@@ -393,9 +401,6 @@ MOBILE RESPONSIVENESS ↓
         max-width: 512px;
         margin: 0 auto;
     }
-    .header__description--para {
-        margin: 20px 0;
-    }
     .header__customers {
         padding-right: 0px;
         max-width: 768px;
@@ -409,9 +414,6 @@ MOBILE RESPONSIVENESS ↓
     }
     footer {
         padding: 80px 32px;
-    }
-    .nav__links {
-        display: none;
     }
 }
 
@@ -427,9 +429,6 @@ MOBILE RESPONSIVENESS ↓
     }
     #pricing .row {
         margin-top: 40px;
-    }
-    .nav__links {
-        display: none;
     }
 }
 
@@ -460,8 +459,5 @@ MOBILE RESPONSIVENESS ↓
     }
     main {
         margin-bottom: 80px;
-    }
-    .nav__links {
-        display: none;
     }
 }
